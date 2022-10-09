@@ -11,7 +11,7 @@
                 "runtimeExecutable": "npx.cmd"
             },
             "runtimeArgs": [
-                "fiori",
+                "fiori_flp",
                 "run"
             ],
             "args": [
