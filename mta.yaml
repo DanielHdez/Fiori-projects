@@ -1,0 +1,92 @@
+_schema-version: "3.2"
+ID: mymtaproyect
+version: 0.0.1
+modules:
+- name: mymtaproyect-destination-content
+  type: com.sap.application.content
+  requires:
+  - name: mymtaproyect-destination-service
+    parameters:
+      content-target: true
+  - name: mymtaproyect_html_repo_host
+    parameters:
+      service-key:
+        name: mymtaproyect_html_repo_host-key
+  - name: uaa_mymtaproyect
+    parameters:
+      service-key:
+        name: uaa_mymtaproyect-key
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Name: dhlinvoices_mymtaproyect_html_repo_host
+          ServiceInstanceName: mymtaproyect-html5-app-host-service
+          ServiceKeyName: mymtaproyect_html_repo_host-key
+          sap.cloud.service: dhlinvoices
+        - Authentication: OAuth2UserTokenExchange
+          Name: dhlinvoices_uaa_mymtaproyect
+          ServiceInstanceName: mymtaproyect-xsuaa-service
+          ServiceKeyName: uaa_mymtaproyect-key
+          sap.cloud.service: dhlinvoices
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+- name: mymtaproyect-app-content
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: mymtaproyect_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - dhlinvoices.zip
+      name: dhlinvoices
+      target-path: resources/
+- name: dhlinvoices
+  type: html5
+  path: invoices
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+resources:
+- name: mymtaproyect-destination-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      init_data:
+        instance:
+          destinations:
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          existing_destinations_policy: update
+      version: 1.0.0
+    service: destination
+    service-name: mymtaproyect-destination-service
+    service-plan: lite
+- name: mymtaproyect_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-name: mymtaproyect-html5-app-host-service
+    service-plan: app-host
+- name: uaa_mymtaproyect
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: mymtaproyect-xsuaa-service
+    service-plan: application
+parameters:
+  deploy_mode: html5-repo
