@@ -1,0 +1,4 @@
+<mvc:View id="mivista" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+<Text id="_IDGenText1" text="Hola Mundo desde vista"></Text>
+
+</mvc:View>
