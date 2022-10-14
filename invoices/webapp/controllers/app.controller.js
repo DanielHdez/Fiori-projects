@@ -1,18 +1,23 @@
+// @ts-nocheck
 
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageToast"
 ], 
 
 /**
-* @param {typeof sap.ui.core.mvc.Controller} Controlador
+* @param {typeof sap.ui.core.mvc.Controller} Controllers
+* @param {typeof sap.m.MessageToast} MessageToasts
 */
-function(Controlador) {
+function(Controllers,MessageToasts) {
     'use strict';
 
-    return Controlador.extend("dhl.invoices.controllers.app",{
+    return Controllers.extend("dhl.invoices.controllers.app",{
         
         onShowHola: function( ){
-            alert("Hola Mundo desde Controlador");
+            MessageToasts.show("Hola desde mensaje de sap.m desde Controlador");
+            
+           // alert("Hola Mundo desde Controlador");
         }
 
     });
