@@ -7,7 +7,7 @@ sap.ui.define([
  */
     function(Text){
 
-        alert("UI5 es correcto");
+       /**alert("UI5 es correcto"); */ 
         new Text({text:"Hola Mundo desde Content"}).placeAt("content");
 
 });
