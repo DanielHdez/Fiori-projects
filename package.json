@@ -9,6 +9,7 @@
         "undeploy": "cf undeploy mymtaproyect --delete-services --delete-service-keys --delete-service-brokers"
     },
     "devDependencies": {
+        "@sapui5/ts-types": "^1.102.9",
         "mbt": "^1.2.18",
         "rimraf": "^3.0.2"
     }

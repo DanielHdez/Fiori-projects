@@ -1,4 +1,4 @@
-<mvc:View id="mivista" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-<Text id="_IDGenText1" text="Hola Mundo desde vista"></Text>
-
+<mvc:View controllerName="dhl.invoices.controllers.app" id="mivista" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+<Text id="_Text1" text="Hola Mundo desde vista"></Text>
+<Button id="_Button1" text="Di Hola" press=".onShowHola"></Button>
 </mvc:View>
