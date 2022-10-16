@@ -2,15 +2,14 @@
 
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast",
-    "dhl/invoices/Models/Model",
-    "sap/ui/model/resource/ResourceModel"
+    "sap/m/MessageToast"
+   // "dhl/invoices/Models/Model",
+   // "sap/ui/model/resource/ResourceModel"
 ], 
 
 /**
 * @param {typeof sap.ui.core.mvc.Controller} Controllers
 * @param {typeof sap.m.MessageToast} MessageToasts
-* @param {typeof sap.ui.model.resource.ResourceModel} ResourceModel
 */
 function(Controllers,MessageToasts,Model,ResourceModel,Text) {
     'use strict';
@@ -18,12 +17,12 @@ function(Controllers,MessageToasts,Model,ResourceModel,Text) {
 
          onInit: function(){
             // Modelo de los datos
-             this.getView().setModel(Model.CreateRecipient());
+          //   this.getView().setModel(Model.CreateRecipient());
             
             //Modelo de traducciones 
 
-            var i18nModel= new ResourceModel({bundleName : "dhl.invoices.i18n.i18n"})
-            this.getView().setModel(i18nModel,"i18n");
+            //var i18nModel= new ResourceModel({bundleName : "dhl.invoices.i18n.i18n"})
+           // this.getView().setModel(i18nModel,"i18n");
           /** *  let oData ={
                 recipient: { name: "Mundo D" }
             };
