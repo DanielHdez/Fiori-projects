@@ -17,12 +17,13 @@ sap.ui.define([
         return UIComponent.extend("dhl.invoices.Component", {
 
             metadata: {
-                rootView: {
-                    "viewName": "dhl.invoices.view.App",
-                    "type": "XML",
-                    "async": true,
-                    "id": "app"
-                }
+                manifest: "json",
+                // rootView: {
+                //     "viewName": "dhl.invoices.view.App",
+                //     "type": "XML",
+                //     "async": true,
+                //     "id": "app"
+                // }
             },
 
             init: function () {
