@@ -1,6 +1,6 @@
 <mvc:View controllerName="dhl.invoices.controllers.app"
           xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-<Button id="_Button1" text="Di Hola" press=".onShowHola"></Button>
+<Button id="_Button1" text="{i18n>DiHola}" press=".onShowHola"></Button>
 <Input id="myinput" value="{/recipient/name}" 
                     description="Hola {/recipient/name}"
                     valueLiveUpdate="true"

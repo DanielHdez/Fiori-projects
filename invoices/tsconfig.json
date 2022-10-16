@@ -1,21 +1,10 @@
 {
-
     "compilerOptions": {
-
-        "module": "none",
-
-        "noEmit": true,
-
-        "checkJs": true,
-
-        "allowJs": true,
-
-        "types": [
-
-            "@sapui5/ts-types"
-
-        ]
-
+      "module": "none",
+      "noEmit": true,
+      "checkJs": true,
+      "allowJs": true,
+      "skipLibCheck": true,
+      "types": ["@sapui5/ts-types"]
     }
-
-}
+  }
