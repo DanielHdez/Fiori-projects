@@ -1,0 +1,17 @@
+<mvc:View controllerName="dhl.invoices.controllers.Hola" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+    <Panel id="_IDGenPanel1" headerText="{i18n>HelloPanel}" class="sapUiResponsiveMargin">
+        <content>
+            <Button id="_Button1" 
+                    text="{i18n>DiHola}" 
+                    press=".onShowHola" 
+                    class="sapUiSmallMarginEnd" />
+            <Input id="myinput" 
+                   value="{/recipient/name}" 
+                   valueLiveUpdate="true" 
+                   width="60%" />
+            <Text id="_IDGenText1" 
+                  text="Hola {/recipient/name}" 
+                  class="sapUiSmallMargin boldElements sapThemeHighlightasColor" />
+        </content>
+    </Panel>
+</mvc:View>

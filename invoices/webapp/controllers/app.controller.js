@@ -28,16 +28,16 @@ function(Controllers,MessageToasts,Model,ResourceModel,Text) {
             };
             const oModel = new JSONModel(oData);
             this.getView().setModel(oModel);*/
-        },
-        onShowHola: function( ){
-            var oBundle = this.getView().getModel("i18n").getResourceBundle();
-            var srecipient =  this.getView().getModel().getProperty("/recipient/name");
-            var mensaje = oBundle.getText("Holamsg",[srecipient]);
+        }//,
+       // onShowHola: function( ){
+      //      var oBundle = this.getView().getModel("i18n").getResourceBundle();
+    //        var srecipient =  this.getView().getModel().getProperty("/recipient/name");
+      //      var mensaje = oBundle.getText("Holamsg",[srecipient]);
           // MessageToasts.show("Hola desde mensaje de sap.m desde Controlador");
-            MessageToasts.show(mensaje);
+      //      MessageToasts.show(mensaje);
             
            // alert("Hola Mundo desde Controlador");
-        }
+      //  }
 
     });
     
