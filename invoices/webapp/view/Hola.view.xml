@@ -13,5 +13,6 @@
                   text="Hola {/recipient/name}" 
                   class="sapUiSmallMargin boldElements sapThemeHighlightasColor" />
         </content>
+        <core:Fragment id="framento1" fragmentName="dhl.invoices.view.Form1" type="XML"></core:Fragment>
     </Panel>
 </mvc:View>
