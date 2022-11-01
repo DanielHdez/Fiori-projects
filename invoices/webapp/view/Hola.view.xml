@@ -1,7 +1,11 @@
 <mvc:View controllerName="dhl.invoices.controllers.Hola" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true">
     <Panel id="_IDGenPanel1" headerText="{i18n>HelloPanel}" class="sapUiResponsiveMargin">
         <content>
-            <Button id="_Button1" 
+            <Button id="_Button2" 
+                    text="{i18n>HolaDialog}" 
+                    press=".onOpenDialog" 
+                    class="sapUiSmallMarginEnd" />
+             <Button id="_Button1" 
                     text="{i18n>DiHola}" 
                     press=".onShowHola" 
                     class="sapUiSmallMarginEnd" />
