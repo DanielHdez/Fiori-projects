@@ -17,6 +17,7 @@ function(Controllers,MessageToasts) {
           
         },
         onShowHola: function( ){
+            
             var oBundle = this.getView().getModel("i18n").getResourceBundle();
             var srecipient =  this.getView().getModel().getProperty("/recipient/name");
             var mensaje = oBundle.getText("Holamsg",[srecipient]);

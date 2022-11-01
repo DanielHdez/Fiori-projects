@@ -3,15 +3,13 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast"
-   // "dhl/invoices/Models/Model",
-   // "sap/ui/model/resource/ResourceModel"
 ], 
 
 /**
 * @param {typeof sap.ui.core.mvc.Controller} Controllers
-* @param {typeof sap.m.MessageToast} MessageToasts
+* @param {typeof sap.m.MessageToast} MessageToast
 */
-function(Controllers,MessageToasts,Model,ResourceModel,Text) {
+function(Controllers) {
     'use strict';
     return Controllers.extend("dhl.invoices.controllers.app",{
 

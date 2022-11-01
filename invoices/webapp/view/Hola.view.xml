@@ -1,4 +1,4 @@
-<mvc:View controllerName="dhl.invoices.controllers.Hola" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+<mvc:View controllerName="dhl.invoices.controllers.Hola" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true">
     <Panel id="_IDGenPanel1" headerText="{i18n>HelloPanel}" class="sapUiResponsiveMargin">
         <content>
             <Button id="_Button1" 
@@ -13,6 +13,6 @@
                   text="Hola {/recipient/name}" 
                   class="sapUiSmallMargin boldElements sapThemeHighlightasColor" />
         </content>
-        <core:Fragment id="framento1" fragmentName="dhl.invoices.view.Form1" type="XML"></core:Fragment>
+        <core:Fragment id="framento" fragmentName="dhl.invoices.view.Form1" type="XML"></core:Fragment>
     </Panel>
 </mvc:View>
