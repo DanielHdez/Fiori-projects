@@ -4,6 +4,7 @@
             <Button id="_Button2" 
                     text="{i18n>HolaDialog}" 
                     press=".onOpenDialog" 
+                    icon="sap-icon://action"
                     class="sapUiSmallMarginEnd" />
              <Button id="_Button1" 
                     text="{i18n>DiHola}" 
