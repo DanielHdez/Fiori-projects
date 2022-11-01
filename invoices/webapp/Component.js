@@ -3,7 +3,8 @@ sap.ui.define([
 
     "sap/ui/core/UIComponent",
     "dhl/invoices/Models/Model",
-    "sap/ui/model/resource/ResourceModel"
+    "sap/ui/model/resource/ResourceModel",
+    "./controllers/HolaDialogo"
 ],
 
     /**
@@ -12,7 +13,7 @@ sap.ui.define([
      * 
      */
 
-    function (UIComponent, Model, ResourceModel) {
+    function (UIComponent, Model, ResourceModel, HolaDialogo) {
 
         return UIComponent.extend("dhl.invoices.Component", {
 
@@ -37,7 +38,19 @@ sap.ui.define([
                 var i18nModel = new ResourceModel({ bundleName: "dhl.invoices.i18n.i18n" })
                 this.setModel(i18nModel, "i18n");
 
+                this._HolaDialogo = new HolaDialogo(this.getRootControl());
+
+            },
+
+            exit: function(){
+                this._HolaDialogo.destroy();
+                delete this._HolaDialogo;
+            },
+
+            onOpenHelloDialog :function(){
+                this._HolaDialogo.open();
             }
+
 
         });
 

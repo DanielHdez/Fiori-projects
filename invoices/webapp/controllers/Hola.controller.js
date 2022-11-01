@@ -28,27 +28,30 @@ sap.ui.define([
 
                 // alert("Hola Mundo desde Controlador");
             },
-            onOpenDialog: function () {
-                const oView = this.getView();
-            if (!this.byId("HolaDialogo")){
-                Fragment.load({
-                    id: oView.getId(),
-                    name: "dhl.invoices.view.HolaDialogo",
-                    controller: this
-                }).then(function (oDialog) {
-                    oView.addDependent(oDialog);
-                    oDialog.open();
-                });
-            } else {
-                this.byId("HolaDialogo").open();
-            }
+             onOpenDialog: function () {
+                this.getOwnerComponent().onOpenHelloDialog();
+             }
+            // onOpenDialog: function () {
+            //    const oView = this.getView();
+            // if (!this.byId("HolaDialogo")){
+            //     Fragment.load({
+            //         id: oView.getId(),
+            //         name: "dhl.invoices.view.HolaDialogo",
+            //          controller: this
+            //     }).then(function (oDialog) {
+            //         oView.addDependent(oDialog);
+            //        oDialog.open();
+            //     });
+            //  } else {
+            //     this.byId("HolaDialogo").open();
+            // }
 
-            },
+            //  },
 
-            onCloseDialogo: function(){
-                this.byId("HolaDialogo").close();
+            //onCloseDialogo: function(){
+            //    this.byId("HolaDialogo").close();
 
-            }
+            //  }
 
         });
 
