@@ -44,7 +44,7 @@
         }
     },
     "sap.ui5": {
-        "flexEnabled": true,
+        "flexEnabled": false,
         "dependencies": {
             "minUI5Version": "1.102.1",
             "libs": {
@@ -69,11 +69,16 @@
                     "bundleName": "dhl.invoices.i18n.i18n"
                 }
             },
+            "invoices":{
+                "type": "sap.ui.model.json.JSONModel",
+                "uri" : "Invoices.json"
+            },
             "": {
                 "dataSource": "mainService",
                 "preload": true,
                 "settings": {}
             }
+           
         },
         "resources": {
             "css": [

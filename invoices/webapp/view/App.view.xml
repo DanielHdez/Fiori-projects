@@ -9,6 +9,7 @@
                     class="sapUiSmallMarginEnd" />
                     <content>
                     <mvc:XMLView id="_IDGenXMLView1" viewName="dhl.invoices.view.Hola"></mvc:XMLView>
+                    <mvc:XMLView viewName="dhl.invoices.view.viewlist"></mvc:XMLView>
                       <!--  <Panel id="_IDGenPanel1" headerText="{i18n>HelloPanel}" class="sapUiResponsiveMargin" >
                             <content>
                             <mvc:XMLView id="_IDGenXMLView1" viewName="dhl.invoices.view.Hola"></mvc:XMLView>
