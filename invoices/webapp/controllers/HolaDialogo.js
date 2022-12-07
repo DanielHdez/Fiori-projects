@@ -11,6 +11,8 @@ sap.ui.define([
 
     function (ManagedObject, Fragment) {
         "use strict"
+
+    
         return ManagedObject.extend("dhl.invoices.controllers.HolaDialogo", {
             constructor: function (oView) {
                 this._oView = oView;

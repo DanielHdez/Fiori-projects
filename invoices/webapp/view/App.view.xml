@@ -2,7 +2,11 @@
     <Shell id="_IDGenShell1">
         <App id="_IDGenApp1">
             <pages>
-                <Page id="_IDGenPage1" title="{i18n>appTitle}">
+                <Page id="_IDGenPage12" title="{i18n>appTitle}">
+                   <Button id="_Button2" 
+                    press=".onOpenDialogHeader" 
+                    icon="sap-icon://action"
+                    class="sapUiSmallMarginEnd" />
                     <content>
                     <mvc:XMLView id="_IDGenXMLView1" viewName="dhl.invoices.view.Hola"></mvc:XMLView>
                       <!--  <Panel id="_IDGenPanel1" headerText="{i18n>HelloPanel}" class="sapUiResponsiveMargin" >

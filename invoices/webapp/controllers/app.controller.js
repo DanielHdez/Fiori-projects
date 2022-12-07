@@ -14,6 +14,7 @@ function(Controllers) {
     return Controllers.extend("dhl.invoices.controllers.app",{
 
          onInit: function(){
+        },
             // Modelo de los datos
           //   this.getView().setModel(Model.CreateRecipient());
             
@@ -26,7 +27,7 @@ function(Controllers) {
             };
             const oModel = new JSONModel(oData);
             this.getView().setModel(oModel);*/
-        }//,
+        
        // onShowHola: function( ){
       //      var oBundle = this.getView().getModel("i18n").getResourceBundle();
     //        var srecipient =  this.getView().getModel().getProperty("/recipient/name");
@@ -36,7 +37,11 @@ function(Controllers) {
             
            // alert("Hola Mundo desde Controlador");
       //  }
+      onOpenDialogHeader: function(){
+        this.getOwnerComponent().onOpenHelloDialog();
+      }
+      
 
     });
-    
+
 });
