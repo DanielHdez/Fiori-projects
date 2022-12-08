@@ -10,7 +10,12 @@
                                         showMeasure: false
                                      }}"
                             numberUnit="{currency>/eur}"
-                            numberState="{= ${invoices>ExtendedPrice} > 350 ? 'Success' : 'Error'}"/>
+                            numberState="{= ${invoices>ExtendedPrice} > 350 ? 'Success' : 'Error'}">
+                <firstStatus>
+                    <ObjectStatus text="{path: 'invoices>Status',
+                                         formatter: '.formatter.invoiceStatus'}"></ObjectStatus>
+                </firstStatus>
+            </ObjectListItem>
             
             <!-- 
                 <ObjectListItem title= "{invoices>Quantity} x {invoices>ProductName}"

@@ -26,7 +26,8 @@
 			"Quantity": 20,
 			"Discount": 0,
 			"ExtendedPrice": "878.0000",
-			"Freight": "61.0200"
+			"Freight": "61.0200",
+			"Status" : "A"
 		},
 		{
 			"ShipName": "Alfred's Futterkiste",
@@ -54,7 +55,8 @@
 			"Quantity": 6,
 			"Discount": 0,
 			"ExtendedPrice": "60.0000",
-			"Freight": "23.9400"
+			"Freight": "23.9400",
+			"Status" : "B"
 		},
 		{
 			"ShipName": "Alfred's Futterkiste",
@@ -82,7 +84,8 @@
 			"Quantity": 15,
 			"Discount": 0,
 			"ExtendedPrice": "270.0000",
-			"Freight": "23.9400"
+			"Freight": "23.9400",
+			"Status" : "A"
 		},
 		{
 			"ShipName": "Alfred's Futterkiste",
@@ -110,7 +113,8 @@
 			"Quantity": 15,
 			"Discount": 0,
 			"ExtendedPrice": "825.0000",
-			"Freight": "69.5300"
+			"Freight": "69.5300",
+			"Status" : "C"
 		},
 		{
 			"ShipName": "Familia Arquibaldo",
@@ -138,7 +142,8 @@
 			"Quantity": 25,
 			"Discount": 0.05,
 			"ExtendedPrice": "779.0000",
-			"Freight": "176.8100"
+			"Freight": "176.8100",
+			"Status" : "B"
 		}
 	]
 }
