@@ -1,5 +1,6 @@
 <mvc:View  controllerName="dhl.invoices.controllers.InvoiceListControl"  xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
-    <List id="lista"  headerText="{i18n>invoiceslisttitle}" class="sapUiResponsiveMargin" width="auto" items="{invoices>/Invoices}" >
+    <List id="lista"  headerText="{i18n>invoiceslisttitle}" class="sapUiResponsiveMargin" width="auto" items="{path   : 'invoices>/Invoices',
+                                                                                                               sorter : { path : 'ProductName' } }" >
         <headerToolbar>
             <Toolbar >
                 <Title text="{i18n>invoiceslisttitle}" ></Title>
