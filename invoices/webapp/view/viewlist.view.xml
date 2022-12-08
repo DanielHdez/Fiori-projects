@@ -1,7 +1,20 @@
-<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+<mvc:View  controllerName="dhl.invoices.controllers.InvoiceListControl"  xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
     <List id="lista"  headerText="{i18n>invoiceslisttitle}" class="sapUiResponsiveMargin" width="auto" items="{invoices>/Invoices}" >
         <items>
-            <ObjectListItem title="{invoices>Quantity} x {invoices>ProductName}"/>
+           <!-- 
+            <ObjectListItem title= "{invoices>Quantity} x {invoices>ProductName}"
+                            number="{parts: [ {path: 'invoices>ExtendedPrice'},
+                                              {path: 'currency>/eur'}],
+                                     type: 'sap.ui.model.type.Currency',
+                                     formatOptions: {
+                                        showMeasure: false
+                                     }}"
+                            numberUnit="{currency>/eur}"/>
+            -->
+                <ObjectListItem title= "{invoices>Quantity} x {invoices>ProductName}"
+                            number="{parts: [ {path: 'invoices>ExtendedPrice'}}}"
+                            numberUnit="{currency>/eur}"/>
+                       
         </items>
     
     </List>
