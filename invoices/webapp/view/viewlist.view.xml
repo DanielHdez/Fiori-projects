@@ -1,5 +1,12 @@
 <mvc:View  controllerName="dhl.invoices.controllers.InvoiceListControl"  xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
     <List id="lista"  headerText="{i18n>invoiceslisttitle}" class="sapUiResponsiveMargin" width="auto" items="{invoices>/Invoices}" >
+        <headerToolbar>
+            <Toolbar >
+                <Title text="{i18n>invoiceslisttitle}" ></Title>
+                <ToolbarSpacer/>
+                <SearchField width="40%" search=".onFilterInvoices"></SearchField>
+            </Toolbar>
+        </headerToolbar>
         <items>
            
             <ObjectListItem title= "{invoices>Quantity} x {invoices>ProductName}"
