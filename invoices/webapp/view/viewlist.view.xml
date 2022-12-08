@@ -1,6 +1,10 @@
 <mvc:View  controllerName="dhl.invoices.controllers.InvoiceListControl"  xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
-    <List id="lista"  headerText="{i18n>invoiceslisttitle}" class="sapUiResponsiveMargin" width="auto" items="{path   : 'invoices>/Invoices',
-                                                                                                               sorter : { path : 'ProductName' } }" >
+   <!--
+    <List id="lista"  headerText="{i18n>invoiceslisttitle}" class="sapUiResponsiveMargin" width="auto" items="{ path   : 'invoices>/Invoices',
+                                                                                                               sorter : { path :     'Status',
+                                                                                                                         formatter: '.formatter.invoiceStatus',
+                                                                                                                         group  : true } 
+                                                                                                                         }" >
         <headerToolbar>
             <Toolbar >
                 <Title text="{i18n>invoiceslisttitle}" ></Title>
@@ -25,11 +29,36 @@
                 </firstStatus>
             </ObjectListItem>
             
-            <!-- 
+         s
                 <ObjectListItem title= "{invoices>Quantity} x {invoices>ProductName}"
                             number="{parts: [ {path: 'invoices>ExtendedPrice'}}}"
                             numberUnit="{currency>/eur}"/>
-                       -->
+                       
+        </items>
+    
+    </List>
+-->
+    <List id="lista"  headerText="{i18n>invoiceslisttitle}" class="sapUiResponsiveMargin" width="auto" items="{ path   : 'nortwind>/Invoices'}" >
+        <headerToolbar>
+            <Toolbar >
+                <Title text="{i18n>invoiceslisttitle}" ></Title>
+                <ToolbarSpacer/>
+                <SearchField width="40%" search=".onFilterinvoices"></SearchField>
+            </Toolbar>
+        </headerToolbar>
+        <items>
+           
+            <ObjectListItem title= "{nortwind>Quantity} x {nortwind>ProductName}"
+                            number="{parts: [ {path: 'nortwind>ExtendedPrice'},
+                                              {path: 'currency>/eur'}],
+                                     type: 'sap.ui.model.type.Currency',
+                                     formatOptions: {
+                                        showMeasure: false
+                                     }}"
+                            numberUnit="{currency>/eur}"
+                            numberState="{= ${nortwind>ExtendedPrice} > 350 ? 'Success' : 'Error'}">
+            </ObjectListItem>
+                          
         </items>
     
     </List>

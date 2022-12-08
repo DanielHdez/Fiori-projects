@@ -73,7 +73,7 @@
                 "type": "sap.ui.model.json.JSONModel",
                 "uri" : "Invoices.json"
             },
-            "": {
+            "nortwind": {
                 "dataSource": "mainService",
                 "preload": true,
                 "settings": {}
